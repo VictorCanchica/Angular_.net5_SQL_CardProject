@@ -9,3 +9,9 @@ background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, F
     font-family: 'Roboto Condensed', sans-serif;
     text-align:center;
 }
+.far{
+    cursor: pointer;
+}
+.fas{
+    cursor:pointer;
+}

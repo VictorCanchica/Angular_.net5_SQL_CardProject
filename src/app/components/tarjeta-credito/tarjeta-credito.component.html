@@ -14,13 +14,46 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="titulo"> Agregar Tarjeta</h5>
+                <form>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><span style="color: white;">.</span><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Titular de la Tarjeta" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><span style="color: white;">.</span><i class="far fa-credit-card"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Numero de la Tarjeta" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><span style="color: white;">.</span><i class="far fa-calendar-alt"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="MM/YY" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                </form>
             </div>
         </div>
         </div>
         <div class="col-lg-6">
             <div class="card">
             <div class="card-body">
-                <h5 class="titulo"> Agregar Tarjeta</h5>
+                <h5 class="titulo"> Lista de Tarjetas</h5>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr *ngFor="let tarjeta of listarTarjetas">
+                        <td>{{tarjeta.titulo}}</td>
+                        <td>{{tarjeta.numeroTarjeta}}</td>
+                        <td>{{tarjeta.fechaExpiracion}}</td>
+                        <td>{{tarjeta.cvv}}</td>
+                        <td><i class="fas fa-edit text-info"></i></td>
+                        <td><i class="far fa-trash-alt text-danger"></i></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                </table>
             </div>
         </div>
         </div>
