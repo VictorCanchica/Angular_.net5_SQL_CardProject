@@ -14,24 +14,37 @@
             <div class="card">
             <div class="card-body">
                 <h5 class="titulo"> Agregar Tarjeta</h5>
-                <form>
+                <form [formGroup]="form" (ngSubmit)="agregarTarjeta()">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><span style="color: white;">.</span><i class="fas fa-user"></i></span>
+                          <span class="input-group-text">&nbsp;<i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Titular de la Tarjeta" aria-label="Username" aria-describedby="basic-addon1">
+                        <input formControlName="titulo" type="text" class="form-control" placeholder="Titular de la Tarjeta">
                       </div>
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                          <span class="input-group-text"><span style="color: white;">.</span><i class="far fa-credit-card"></i></span>
+                          <span class="input-group-text">&nbsp;<i class="far fa-credit-card"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Numero de la Tarjeta" aria-label="Username" aria-describedby="basic-addon1">
+                        <input formControlName="numeroTarjeta" type="text" class="form-control" placeholder="Numero de la Tarjeta">
                       </div>
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><span style="color: white;">.</span><i class="far fa-calendar-alt"></i></span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="MM/YY" aria-label="Username" aria-describedby="basic-addon1">
+                      <div class="row">
+                          <div class="col-lg-7">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">&nbsp;<i class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <input formControlName="fechaExpiracion" type="text" class="form-control" placeholder="MM/YY">
+                              </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">&nbsp;<i class="fas fa-key"></i></span>
+                                </div>
+                                <input formControlName="cvv" type="password" class="form-control" placeholder="CVV"  >
+                            </div>
+                          </div>
+                          <button type="submit" class="btn-block btn btn-success btn-lg "><i class="fas fa-database"></i> Aceptar</button>
                       </div>
                 </form>
             </div>
